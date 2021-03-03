@@ -6,18 +6,22 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+
+//    lateinit var todoListRecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+//
+//        todoListRecyclerView = findViewById(R.id.lists_recyclerview)
+//        todoListRecyclerView.layoutManager = LinearLayoutManager(this)
+//        todoListRecyclerView.adapter = TodoListAdapter()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_settings -> true
+
+
             else -> super.onOptionsItemSelected(item)
         }
     }
